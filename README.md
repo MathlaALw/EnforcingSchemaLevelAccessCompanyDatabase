@@ -236,13 +236,22 @@ Adil created new tables under the dbo schema instead of the correct HR schema, w
 
 **Identify the security flaws:**
 
-• No separation between development and production
+**• No separation between development and production**
 
-• Full access given to developers
+Adil was allowed to test directly in the production environment, which led to accidental data loss and exposure of sensitive information.
 
-• No schema-level restrictions
+**• Full access given to developers** 
 
-• Lack of role-based permission control
+Adil had full control over the production database, including data manipulation and user management.
+
+**• No schema-level restrictions**
+
+There were no schema-level restrictions, allowing Adil to create and modify objects in any schema without oversight. This led to confusion and permission issues for the HR team.
+
+**• Lack of role-based permission control**
+
+Adil had unrestricted access to create roles and logins, which allowed him to grant excessive permissions to other users without proper authorization or oversight.
+
 
 **3. Suggested Solutions**
 
