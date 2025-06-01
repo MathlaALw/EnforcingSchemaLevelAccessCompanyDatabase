@@ -208,3 +208,61 @@ caused permission issues for HR team users.
 **Trainee Reflection Task: Security Analysis Report**
 **Your Job:** Analyze the above scenario and write a Security Risk Report with the following points.
 
+## Report Sections
+
+**1. Summary of the Problems**
+
+List and describe what went wrong (based on the points above).
+
+**A. Accidental Data Deletion**
+
+Adil accidentally executed a DELETE FROM Employees statement on the production database, thinking he was working in a test environment. No backup existed to recover the deleted records.
+
+**B. Salary Data Leaked**
+
+Adil exported a test report containing employee salary details and mistakenly shared it with an external UI developer, violating data confidentiality.
+
+**C. Unauthorized Role Creation**
+
+Adil created a SQL login for a junior developer without informing the DBA. This login gave the junior developer unrestricted access to the full database, including sensitive HR records.
+
+**D. Schema Confusion**
+
+Adil created new tables under the dbo schema instead of the correct HR schema, which resulted in permission issues for HR users who lacked access to the dbo schema.
+
+
+
+**2. Root Causes**
+
+**Identify the security flaws:**
+
+• No separation between development and production
+
+• Full access given to developers
+
+• No schema-level restrictions
+
+• Lack of role-based permission control
+
+**3. Suggested Solutions**
+
+Explain how these issues could have been avoided using:
+• Schema-level permissions
+• Separation of roles (e.g., read-only, data entry)
+• Use of views to hide sensitive columns
+• Audit logs or restricted role creation
+• Environment separation (dev vs prod)
+
+**4. Lessons Learned**
+
+• What should developers have access to?
+• What should be restricted to DBAs or admins?
+• Why is "minimum privilege" important?
+
+**Bonus Activity (Optional)**
+
+**simulate:**
+
+• Creating a role like ReadOnly_Dev and granting only SELECT on a schema.
+• Trying to run an INSERT or DELETE command using that limited role to observe
+permission denial.
