@@ -131,3 +131,21 @@ CREATE TABLE Sales.Orders (
     but the table-by-table permissions require access to each table one by one, and apply permissions to the entire schema .
 - How this setup supports data segregation in real-world companies
     - This setup ensures that each department can only access its own data, preventing unauthorized access and maintaining data integrity. It allows for clear separation of concerns, which is crucial in environments where sensitive information is handled, such as HR and Sales.
+
+
+------------
+# Reflection Report Instructions
+## Understanding SQL Security Levels and Real-World Risks
+
+**1. What are SQL Security Levels?**
+
+**Explain:**
+
+   • **Server-level login** -> This is the highest level of security in SQL Server, where users are authenticated at the server level. It allows access to the SQL Server instance itself.
+
+   • **Database-level user** -> This is a user that is created within a specific database, allowing access to that database's objects and data.
+   
+   • **Schema-level permissions** -> This allows for grouping of database objects and managing permissions at the schema level, which is more efficient than managing permissions on individual tables.
+   
+   • **Object-level permissions** -> This allows for fine-grained control over specific database objects, such as tables or views, enabling or restricting access to those objects for specific users or roles.
+
