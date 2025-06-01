@@ -279,10 +279,18 @@ Development and production environments should be completely separated. Develope
 
 **4. Lessons Learned**
 
-• What should developers have access to?
+**• What should developers have access to?**
 
-• What should be restricted to DBAs or admins?
-• Why is "minimum privilege" important?
+Developers should have access to a separate development environment with limited permissions. They should not have direct access to production data or the ability to modify production schemas.
+
+**• What should be restricted to DBAs or admins?**
+
+Database administration tasks, such as creating logins, managing roles, and modifying schema-level permissions, should be restricted to DBAs or admins. This ensures that only authorized personnel can make changes that could impact data security and integrity.
+
+**• Why is "minimum privilege" important?** 
+
+The principle of "minimum privilege" is crucial because it limits user access to only what is necessary for their job functions. This reduces the risk of accidental data loss, unauthorized access, and potential security breaches. By ensuring that users have only the permissions they need, organizations can better protect sensitive data and maintain a secure database environment.
+
 
 **Bonus Activity (Optional)**
 
