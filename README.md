@@ -299,3 +299,27 @@ The principle of "minimum privilege" is crucial because it limits user access to
 • Creating a role like ReadOnly_Dev and granting only SELECT on a schema.
 • Trying to run an INSERT or DELETE command using that limited role to observe
 permission denial.
+
+
+**Create a ReadOnly role for HR data**
+
+```sql
+CREATE ROLE ReadOnly_Dev;
+```
+
+![Create ReadOnly Role](image/CreateRole.png)
+
+**This role only allows reading HR data**
+
+```sql
+GRANT SELECT ON SCHEMA::HR TO ReadOnly_Dev;
+```
+![Grant Select Permission](image/RoleSelect.png)
+
+**Add hr_user to the read-only role**
+
+```sql
+
+EXEC sp_addrolemember 'ReadOnly_Dev', 'hr_user';
+```
+![Add User to Role](image/HR_RoleMembers.png)
