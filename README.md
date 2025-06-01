@@ -35,6 +35,7 @@ CREATE USER sales_user FOR LOGIN sales_login;
 
 ![Create Database](image/CreateCompanyDB.png)
 ![Create Logins and Users](image/CreateSQLlogins.png)
+![Logins Users](image/LoginsScreenshot.png)
 
 
 2. Create two schemas: HR and Sales. 
