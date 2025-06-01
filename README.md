@@ -149,3 +149,14 @@ CREATE TABLE Sales.Orders (
    
    • **Object-level permissions** -> This allows for fine-grained control over specific database objects, such as tables or views, enabling or restricting access to those objects for specific users or roles.
 
+**2. Benefits of Applying Security Levels**
+
+• Protect sensitive data from unauthorized access
+
+• Ensure data integrity by preventing unauthorized modifications
+
+• Control user access to specific data and operations
+
+• Simplify permission management by grouping objects into schemas
+
+
