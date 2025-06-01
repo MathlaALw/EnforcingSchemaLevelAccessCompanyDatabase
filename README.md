@@ -160,3 +160,14 @@ CREATE TABLE Sales.Orders (
 • Simplify permission management by grouping objects into schemas
 
 
+**3. Real-World Risks Without Security**
+
+**Explain what might happen if:**
+
+• **Everyone has full access** -> This can lead to data breaches, unauthorized modifications, and loss of sensitive information. Employees could access and manipulate data they are not authorized to view or change.
+
+• **Developers modify production data** -> This can result in data corruption, loss of critical information, and disruption of business operations. It can also lead to compliance issues if sensitive data is altered or deleted without proper authorization.
+
+• **Interns access HR data**  -> This can lead to privacy violations, as interns may not have the necessary training or understanding of data sensitivity. They could inadvertently expose or misuse personal information of employees, leading to legal and ethical issues for the company.
+
+
