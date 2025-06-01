@@ -92,8 +92,9 @@ CREATE TABLE Sales.Orders (
 ![Create Tables](image/CreateTableInsideSchema.png)
 
 
--- 4. Assign schema-level permissions so: 
-	-- o HR users cannot access Sales data.
+4. Assign schema-level permissions so: 
+
+ - HR users cannot access Sales data.
 
     ```sql
     -- Give HR user full access to HR schema
@@ -104,9 +105,8 @@ CREATE TABLE Sales.Orders (
     ```
 ![Assign HR Permissions](image/HR_Permissions.png)
 	
-
-	-- o Sales users cannot access HR data. 
-
+- Sales users cannot access HR data. 
+- 
     ```sql
     -- Give Sales user full access to Sales schema
     GRANT SELECT, INSERT, UPDATE, DELETE ON SCHEMA::Sales TO sales_user;
@@ -114,4 +114,14 @@ CREATE TABLE Sales.Orders (
     DENY SELECT, INSERT, UPDATE, DELETE ON SCHEMA::HR TO sales_user;
     ```
 ![Assign Sales Permissions](image/Sales_Permissions.png)
+
+**Task Output Checklist**
+
+   - Try to:
+1. Connect as hr_login and access HR.Employees ( should work)
+![Access HR Employees](image/Hr_AccessToHRTable.png)
+
+2. Try to access Sales.Customers ( should be denied)
+
+![Access Sales Customers](image/Hr_CantAccessToHRTable.png)
 
