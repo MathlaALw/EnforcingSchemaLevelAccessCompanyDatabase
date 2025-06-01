@@ -257,23 +257,23 @@ Adil had unrestricted access to create roles and logins, which allowed him to gr
 
 **Explain how these issues could have been avoided using:**
 
-• Schema-level permissions
+**• Schema-level permissions**
 
 Schema-level permissions should have been implemented to restrict access to specific schemas based on user roles. For example, HR users should only have access to the HR schema, while Sales users should only access the Sales schema. This would prevent accidental data manipulation across departments.
 
-• Separation of roles (e.g., read-only, data entry)
+**• Separation of roles (e.g., read-only, data entry)**
 
 Roles should be defined with specific permissions, such as ReadOnly or DataEntry roles. Developers should not have full control over production data. Instead, they should have limited access to perform necessary tasks without the risk of accidental deletions or modifications.
 
-• Use of views to hide sensitive columns
+**• Use of views to hide sensitive columns**
 
 Views should be created to expose only necessary columns to users. For example, a view for HR users could exclude salary information, ensuring that sensitive data is not accessible to those who do not need it.
 
-• Audit logs or restricted role creation
+**• Audit logs or restricted role creation**
 
 Audit logs should be enabled to track all actions performed by users, especially those with elevated permissions. Additionally, role creation should be restricted to DBAs or admins to prevent unauthorized access and modifications. This would ensure that only authorized personnel can create or modify roles and permissions.
 
-• Environment separation (dev vs prod)
+**• Environment separation (dev vs prod)**
 
 Development and production environments should be completely separated. Developers should work in a dedicated development environment with limited access to production data. This would prevent accidental modifications to production data and ensure that testing does not impact live systems.
 
