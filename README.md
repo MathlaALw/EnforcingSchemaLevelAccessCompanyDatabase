@@ -171,3 +171,40 @@ CREATE TABLE Sales.Orders (
 • **Interns access HR data**  -> This can lead to privacy violations, as interns may not have the necessary training or understanding of data sensitivity. They could inadvertently expose or misuse personal information of employees, leading to legal and ethical issues for the company.
 
 
+----------------
+
+#  Security Risk Report : The Overpowered Developer
+
+**Scenario:** **"The Overpowered Developer"**
+
+You’re part of a company building an internal Payroll Management System. During
+development, a database developer named Adil was given full control on the production
+database to “speed up” testing and updates. However, the following problems occurred:
+
+**What Went Wrong**
+
+**1. Accidental Data Deletion**
+
+- Adil ran a DELETE FROM Employees command thinking he was connected to the
+test database.
+- No backup was taken before running the query.
+
+**2. Salary Data Leaked**
+
+- Adil created a report for testing that included all employee salaries.
+
+- He shared the exported Excel file with an external UI developer by mistake.
+**3. Unauthorized Role Creation**
+- To “help,” Adil created a new SQL login for a junior developer without informing
+the DB admin.
+
+- The junior dev used that login to explore the entire database, including sensitive
+HR data.
+
+**4. Schema Confusion**
+- Adil created new tables inside the wrong schema (dbo instead of HR) which
+caused permission issues for HR team users.
+
+**Trainee Reflection Task: Security Analysis Report**
+**Your Job:** Analyze the above scenario and write a Security Risk Report with the following points.
+
