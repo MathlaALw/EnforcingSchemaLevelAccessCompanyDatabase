@@ -65,3 +65,27 @@ CREATE TABLE Sales.Orders (
     TotalAmount DECIMAL(10, 2),
     FOREIGN KEY (CustomerID) REFERENCES Sales.Customers(CustomerID)
 );
+
+
+
+-- 4. Assign schema-level permissions so: 
+	-- o HR users cannot access Sales data.
+
+
+    -- Give HR user full access to HR schema
+    GRANT SELECT, INSERT, UPDATE, DELETE ON SCHEMA::HR TO hr_user;
+    -- Prevent HR user from accessing Sales schema
+    DENY SELECT, INSERT, UPDATE, DELETE ON SCHEMA::Sales TO hr_user;
+
+
+	
+
+	-- o Sales users cannot access HR data. 
+
+    -- Give Sales user full access to Sales schema
+    GRANT SELECT, INSERT, UPDATE, DELETE ON SCHEMA::Sales TO sales_user;
+    -- Prevent Sales user from accessing HR schema
+    DENY SELECT, INSERT, UPDATE, DELETE ON SCHEMA::HR TO sales_user;
+
+
+ 
