@@ -18,3 +18,14 @@ CREATE USER hr_user FOR LOGIN hr_login;
 -- Create login and user for Sales department
 CREATE LOGIN sales_login WITH PASSWORD = 'Sales@12345';
 CREATE USER sales_user FOR LOGIN sales_login;
+
+
+
+-- 2. Create two schemas: HR and Sales. 
+
+-- Create HR schema
+CREATE SCHEMA HR;
+
+
+-- Create Sales schema
+CREATE SCHEMA Sales;

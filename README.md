@@ -35,3 +35,20 @@ CREATE USER sales_user FOR LOGIN sales_login;
 
 ![Create Database](image/CreateCompanyDB.png)
 ![Create Logins and Users](image/CreateSQLlogins.png)
+
+
+2. Create two schemas: HR and Sales. 
+
+
+```sql
+
+-- Create HR schema
+CREATE SCHEMA HR;
+
+
+-- Create Sales schema
+CREATE SCHEMA Sales;
+
+```
+![Create Schemas](image/CreateHRAndSalesSchemas.png)
+
