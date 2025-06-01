@@ -125,3 +125,9 @@ CREATE TABLE Sales.Orders (
 
 ![Access Sales Customers](image/Hr_CantAccessToHRTable.png)
 
+3. Write a short explanation:
+- Why schema-level security is better than table-by-table permissions
+    - Schema-level security allow to manage permissions at the schema level instead of individual tables
+    but the table-by-table permissions require access to each table one by one, and apply permissions to the entire schema .
+- How this setup supports data segregation in real-world companies
+    - This setup ensures that each department can only access its own data, preventing unauthorized access and maintaining data integrity. It allows for clear separation of concerns, which is crucial in environments where sensitive information is handled, such as HR and Sales.
